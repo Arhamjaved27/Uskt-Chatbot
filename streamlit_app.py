@@ -56,5 +56,6 @@ if user_query is not None and user_query !="":
 
             
         # st.markdown(ai_response)
-        #this is to update ai message in chat history
+        #Hi
+        #this is to update ai message in chat-history
     st.session_state.chat_history.append(AIMessage(ai_response["result"]))
