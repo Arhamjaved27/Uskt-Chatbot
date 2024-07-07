@@ -7,3 +7,4 @@ tiktoken==0.4.0
 faiss-cpu==1.7.4
 protobuf~=3.19.0
 sentence-transformers==2.2.2
+InstructorEmbedding==1.0.1
