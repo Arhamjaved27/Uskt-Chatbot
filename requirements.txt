@@ -15,3 +15,5 @@ pypdf
 tiktoken
 sentence-transformers
 faiss-cpu
+tensorflow 
+pytorch
