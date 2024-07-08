@@ -1,0 +1,8 @@
+google-generativeai
+langchain==0.0.284
+python-dotenv==1.0.0
+streamlit==1.22.0
+protobuf~=3.19.0
+sentence-transformers==2.2.2
+InstructorEmbedding==1.0.1
+huggingface==0.0.1
