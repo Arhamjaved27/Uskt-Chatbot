@@ -1,5 +1,4 @@
 google-generativeai
-streamlit
 protobuf~=3.19.0
 InstructorEmbedding==1.0.1
 huggingface==0.0.1
@@ -13,3 +12,4 @@ sentence-transformers
 faiss-cpu
 langchain_community
 langchain_core
+treamlit==1.24.0
