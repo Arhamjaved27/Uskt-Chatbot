@@ -1,7 +1,7 @@
 google-generativeai
 langchain
 python-dotenv==1.0.0
-streamlit==1.22.0
+streamlit
 protobuf~=3.19.0
 sentence-transformers==2.2.2
 InstructorEmbedding==1.0.1
