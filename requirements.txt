@@ -7,12 +7,8 @@ langchain-openai
 langchain 
 openai 
 pandas
-tabulate
 python-dotenv
-openpyxl
-pandasai
-pypdf
 tiktoken
 sentence-transformers
 faiss-cpu
-tensorflow 
+tensorflow==2.14.1
