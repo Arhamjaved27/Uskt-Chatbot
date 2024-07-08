@@ -30,7 +30,7 @@ for message in st.session_state.chat_history:
             
         
 
-user_query = st.chat_input("Type Somthing..!")
+user_query = st.chat_input()
 
 if user_query is not None and user_query !="":
     st.session_state.chat_history.append(HumanMessage(user_query))
@@ -39,23 +39,23 @@ if user_query is not None and user_query !="":
         st.markdown(user_query)
 
     
-    with st.chat_message("AI"):
-        chain = get_qa_chain()
+    # with st.chat_message("AI"):
+    #     # chain = get_qa_chain()
 
-        try:
-            ai_response = chain(user_query + "?")
-            st.markdown(ai_response["result"])
-            # print(response["result"])
-        except IndexError as e:
-            # print(f"An error occurred: {e}")
-            # print("The LLM response was empty or malformed.")
-            st.markdown("An error occurred: {e}")
-        except Exception as e:
-            # print(f"An unexpected error occurred: {e}")
-            st.markdown(f"An unexpected error occurred: {e}")
+    #     try:
+    #         ai_response = chain(user_query + "?")
+    #         st.markdown(ai_response["result"])
+    #         # print(response["result"])
+    #     except IndexError as e:
+    #         # print(f"An error occurred: {e}")
+    #         # print("The LLM response was empty or malformed.")
+    #         st.markdown("An error occurred: {e}")
+    #     except Exception as e:
+    #         # print(f"An unexpected error occurred: {e}")
+    #         st.markdown(f"An unexpected error occurred: {e}")
 
             
-        # st.markdown(ai_response)
-        #Hi
-        #this is to update ai message in chat-history
-    st.session_state.chat_history.append(AIMessage(ai_response["result"]))
+    #     # st.markdown(ai_response)
+    #     #Hi
+    #     #this is to update ai message in chat-history
+    # st.session_state.chat_history.append(AIMessage(ai_response["result"]))
