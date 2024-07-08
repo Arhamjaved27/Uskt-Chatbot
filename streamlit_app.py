@@ -1,7 +1,7 @@
 import streamlit as st
 from typing import Literal
 from dataclasses import dataclass
-from llm_model import get_qa_chain, create_vector_db
+# from llm_model import get_qa_chain, create_vector_db
 import streamlit.components.v1 as components
 from langchain_core.messages import HumanMessage, AIMessage
 st.set_page_config(page_title="Chatbot", page_icon="🖋")
