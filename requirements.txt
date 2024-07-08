@@ -11,4 +11,3 @@ python-dotenv
 tiktoken
 sentence-transformers
 faiss-cpu
-tensorflow==2.14.1
