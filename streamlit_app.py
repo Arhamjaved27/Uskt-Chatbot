@@ -30,7 +30,8 @@ for message in st.session_state.chat_history:
             
         
 
-user_query = st.chat_input()
+# user_query = st.chat_input()
+user_query = st.text_input(placeholder="hello")
 
 if user_query is not None and user_query !="":
     st.session_state.chat_history.append(HumanMessage(user_query))
