@@ -31,7 +31,13 @@ for message in st.session_state.chat_history:
         
 
 # user_query = st.chat_input()
-user_query = st.text_input(placeholder="hello")
+user_query = st.form("Chat-Form")
+with user_query:
+    # st.markdown("**Chat** -- press enter to Submit")
+    cols = st.columns((6,1))
+    cols[0].text_input("Chat",placeholder="Hello Bot",label_visibility="collapsed", key ="human_prompt",)
+    cols[1].form_submit_button("submit", type="primary",)
+
 
 if user_query is not None and user_query !="":
     st.session_state.chat_history.append(HumanMessage(user_query))
