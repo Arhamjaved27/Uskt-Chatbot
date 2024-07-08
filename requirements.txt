@@ -1,5 +1,5 @@
 google-generativeai
-langchain==0.0.284
+langchain
 python-dotenv==1.0.0
 streamlit==1.22.0
 protobuf~=3.19.0

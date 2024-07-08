@@ -11,9 +11,9 @@ from dotenv import load_dotenv
 
 
 load_dotenv()  # take environment variables from .env (especially openai api key)
-
+GOOGLE_API_KEY = "AIzaSyBAWQHkwRn_CIdkf4-Pkff_8lgkyILKQc8"
 # Create Google Palm LLM model
-llm = GooglePalm(google_api_key=st.secrets["GOOGLE_API_KEY"], temperature=0.1)
+llm = GooglePalm(google_api_key=GOOGLE_API_KEY, temperature=0.1)
 # # Initialize instructor embeddings using the Hugging Face model
 instructor_embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-large")
 vectordb_file_path = "vector_DB"
