@@ -15,54 +15,47 @@ st.title("Chat-bot Guided Virtual Tour Of Uskt 📖")
 #     create_vector_db()
 
 
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = []
+# if "chat_history" not in st.session_state:
+#     st.session_state.chat_history = []
 
-#conversation
+# #conversation
 
-for message in st.session_state.chat_history:
-    if isinstance(message, HumanMessage):
-        with st.chat_message("Human"):
-            st.markdown(message.content)
-    else:    
-        with st.chat_message("AI"):
-            st.markdown(message.content)
+# for message in st.session_state.chat_history:
+#     if isinstance(message, HumanMessage):
+#         with st.chat_message("Human"):
+#             st.markdown(message.content)
+#     else:    
+#         with st.chat_message("AI"):
+#             st.markdown(message.content)
             
         
 
 # user_query = st.chat_input()
-user_query = st.form("Chat-Form")
-with user_query:
-    # st.markdown("**Chat** -- press enter to Submit")
-    cols = st.columns((6,1))
-    cols[0].text_input("Chat",placeholder="Hello Bot",label_visibility="collapsed", key ="human_prompt",)
-    cols[1].form_submit_button("submit", type="primary",)
 
+# if user_query is not None and user_query !="":
+#     st.session_state.chat_history.append(HumanMessage(user_query))
 
-if user_query is not None and user_query !="":
-    st.session_state.chat_history.append(HumanMessage(user_query))
-
-    with st.chat_message("Human"):
-        st.markdown(user_query)
+#     with st.chat_message("Human"):
+#         st.markdown(user_query)
 
     
-    with st.chat_message("AI"):
-        chain = get_qa_chain()
+#     with st.chat_message("AI"):
+#         chain = get_qa_chain()
 
-        try:
-            ai_response = chain(user_query + "?")
-            st.markdown(ai_response["result"])
-            # print(response["result"])
-        except IndexError as e:
-            # print(f"An error occurred: {e}")
-            # print("The LLM response was empty or malformed.")
-            st.markdown("An error occurred: {e}")
-        except Exception as e:
-            # print(f"An unexpected error occurred: {e}")
-            st.markdown(f"An unexpected error occurred: {e}")
+#         try:
+#             ai_response = chain(user_query + "?")
+#             st.markdown(ai_response["result"])
+#             # print(response["result"])
+#         except IndexError as e:
+#             # print(f"An error occurred: {e}")
+#             # print("The LLM response was empty or malformed.")
+#             st.markdown("An error occurred: {e}")
+#         except Exception as e:
+#             # print(f"An unexpected error occurred: {e}")
+#             st.markdown(f"An unexpected error occurred: {e}")
 
             
-        # st.markdown(ai_response)
-        #Hi
-        #this is to update ai message in chat-history
-    st.session_state.chat_history.append(AIMessage(ai_response["result"]))
+#         # st.markdown(ai_response)
+#         #Hi
+#         #this is to update ai message in chat-history
+#     st.session_state.chat_history.append(AIMessage(ai_response["result"]))
