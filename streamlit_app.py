@@ -8,8 +8,6 @@ from langchain_core.messages import HumanMessage, AIMessage
 
 st.set_page_config(page_title="Chatbot", page_icon="🖋")
 
-def history():
-    return st.session_state.chat_history
 
 st.title("Chat-bot Guided Virtual Tour Of Uskt 📖")
 btn = st.button("Create Knowledgebase")
