@@ -12,4 +12,4 @@ sentence-transformers
 faiss-cpu
 langchain_community
 langchain_core
-treamlit==1.24.0
+streamlit==1.24.0
