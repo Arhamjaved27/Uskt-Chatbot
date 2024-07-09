@@ -11,5 +11,6 @@ python-dotenv
 tiktoken
 sentence-transformers
 faiss-cpu
+dataclass
 langchain_community
-langchain_coresssss
+langchain_core
